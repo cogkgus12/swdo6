@@ -4,7 +4,7 @@
 <html>
 <head>
 <title>OSOT</title>
-<!-- <link rel="stylesheet" href="/resources/css/home.css"> dkdkdkdkdkdkdkdkdk -->
+<!-- <link rel="stylesheet" href="/resources/css/home.css">-->
 <link rel="stylesheet" href="/resources/css/default.css">
 <link rel="stylesheet" href="/resources/css/main.css">
   <link rel="stylesheet" href="/resources/css/a.css"> 
