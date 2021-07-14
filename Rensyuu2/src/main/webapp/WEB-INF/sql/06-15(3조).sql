@@ -1,4 +1,4 @@
---À¯Àú Å×ÀÌºí
+--ìœ ì € í…Œì´ë¸”dddddddddd
 create table user_table(
     user_id     varchar2(30)    primary key
     ,user_pw    varchar2(30)    not null
@@ -7,20 +7,20 @@ create table user_table(
     ,user_phone varchar2(30)   not null
 );
 
---°ÇÀÇ Å×ÀÌºí
+--ê±´ì˜ í…Œì´ë¸”
 create table request_table(
-    request_no        number          primary key,    --±Û¹øÈ£
-    user_id     varchar2(30)    not null,       --ÀÛ¼ºÀÚ
-    request_title     varchar2(100)   not null,       --±ÛÁ¦¸ñ
-    request_indate    date            default sysdate, --ÀÛ¼ºÀÏ
-    request_hits      number          default 0,      --Á¶È¸¼ö
-    request_content   varchar2(3000)  not null,       --±Û³»¿ë
+    request_no        number          primary key,    --ê¸€ë²ˆí˜¸
+    user_id     varchar2(30)    not null,       --ì‘ì„±ì
+    request_title     varchar2(100)   not null,       --ê¸€ì œëª©
+    request_indate    date            default sysdate, --ì‘ì„±ì¼
+    request_hits      number          default 0,      --ì¡°íšŒìˆ˜
+    request_content   varchar2(3000)  not null,       --ê¸€ë‚´ìš©
     constraint request_table_fk foreign key(user_id)
     references user_table(user_id) on delete cascade
 );
 create sequence request_sequence;
 
---º¸µå(¿µÈ­) Å×ÀÌºí
+--ë³´ë“œ(ì˜í™”) í…Œì´ë¸”
 create table board_table(
     board_no        number      primary key
     ,board_title    varchar2(300)       not null
@@ -33,7 +33,7 @@ create table board_table(
 );
 create sequence board_sequence;
 
---ÂòÇÏ±â Å×ÀÌºí(Áö±İ ´çÀå ¾È ÇÊ¿äÇÔ)
+--ì°œí•˜ê¸° í…Œì´ë¸”(ì§€ê¸ˆ ë‹¹ì¥ ì•ˆ í•„ìš”í•¨)
 create table like_table(
     like_no     number   primary key,
     board_no    number      not null,
@@ -47,7 +47,7 @@ create table like_table(
 create sequence like_sequence;
 
 
---½Ã°£ÀÌ ³­´Ù¸é ´ñ±Û Å×ÀÌºí
+--ì‹œê°„ì´ ë‚œë‹¤ë©´ ëŒ“ê¸€ í…Œì´ë¸”
 --create table reply_tb(
 --    reply_no    number    primary key,
 --    user_id     varchar2(30)    not null,
