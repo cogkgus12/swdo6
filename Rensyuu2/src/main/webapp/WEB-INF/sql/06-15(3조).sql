@@ -1,4 +1,4 @@
---유저 테이블dddddddddd
+--유저 테이블
 create table user_table(
     user_id     varchar2(30)    primary key
     ,user_pw    varchar2(30)    not null
