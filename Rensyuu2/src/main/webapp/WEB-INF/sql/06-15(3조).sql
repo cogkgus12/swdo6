@@ -35,16 +35,15 @@ create sequence board_sequence;
 
 --찜하기 테이블(지금 당장 안 필요함)
 create table like_table(
-    like_no     number   primary key,
     board_no    number      not null,
     user_id     varchar2(30)    not null,
     like_check  number  default 0,
     constraint like_fk1 foreign key (board_no)
     REFERENCES board_table(board_no) on delete cascade,
     constraint like_fk2 foreign key (user_id)
-    REFERENCES user_table(user_id) on delete cascade
+    REFERENCES user_table(user_id) on delete cascade,
+    constraint like_sk primary key(board_no,user_id)
 );
-create sequence like_sequence;
 
 
 --시간이 난다면 댓글 테이블
